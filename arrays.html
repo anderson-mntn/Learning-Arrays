@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+    }
+    body{
+        display: flex;
+    }
+#fibo-card{
+    width:fit-content ; 
+    height: 80px;
+    background-color: lightblue;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+#fibo-card, #arrayTxt:hover{
+    cursor: pointer;
+}
+#arrayTxt{
+    margin: auto 20px;
+    width:400px ; 
+    height: fit-content;
+    background-color: lightblue;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+</style>
+<body>
+    <div id="fibo-card">
+        <p>Click for <span style="color:#e72f29">Fibonacci</span> sequence</p>
+        <span id="fibo-res" style="margin-top: 5px;"></span>
+    </div>
+    <div id="arrayTxt">
+        <p>Insert number in 1st pos of array</p>
+        <input id="arrayInpt" type="text" style="height: 30px; margin: 10px; text-align: center;">
+        <button id="insert-array-btn" style="width: 170px; height: 30px;">Insert</button>
+        <div id="res" style="margin-top: 10px;"></div>
+    </div>
+    <script src="arrays.js"></script>
+</body>
+</html>
