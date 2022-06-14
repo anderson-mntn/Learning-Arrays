@@ -32,16 +32,19 @@
 }
 #arrayTxt{
     margin: auto 20px;
-    width:400px ; 
-    height: fit-content;
+    width: 400px ; 
+    height: 180px;
     background-color: lightblue;
     align-items: center;
     display:flex;
-    justify-content: center;
+    justify-content: center;    
     flex-direction: column;
-    padding: 10px;
 }
+/* #insert-array-btn, #pop-array-btn{
+    flex-direction: row;
+} */
 
+    
 
 </style>
 <body>
@@ -52,8 +55,13 @@
     <div id="arrayTxt">
         <p>Insert number in 1st pos of array</p>
         <input id="arrayInpt" type="text" style="height: 30px; margin: 10px; text-align: center;">
-        <button id="insert-array-btn" style="width: 170px; height: 30px;">Insert</button>
-        <div id="res" style="margin-top: 10px;"></div>
+       <div>
+        <button id="insert-array-btn" style="width: 100px; height: 30px;">Insert</button>
+        <button id="pop-array-btn" style="width: 100px; height: 30px;" >Pop</button>
+       </div>
+        
+        <br>
+        <div id="res" style="padding: 20px; box-sizing: content-box;">  &nbsp </div>
     </div>
     <script src="arrays.js"></script>
 </body>
