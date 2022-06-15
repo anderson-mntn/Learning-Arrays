@@ -1,3 +1,4 @@
+//Making fibonacci sequence
 const fibonacci = [0]
 fibonacci[1] = 1
 fibonacci[2] = 1
@@ -12,19 +13,12 @@ fiboCard.addEventListener('click', function () {
     fiboRes.innerHTML = fibonacci.join(", ")
 })
 
-
-
 // const fibonacci = (n) =>
 //   Array.from({ length: n }).reduce(
 //     (acc, val, i) => acc.concat(i > 1 ? acc[i - 1] + acc[i - 2] : i),
 //     []
 //   );
-  
 //   console.log(fibonacci(10));
-
-
-
-
 
 // ------------------------------------------------------------------------
 
@@ -38,7 +32,6 @@ Array.prototype.insertFirstPosition = function(value){
     this[0] = value
 }
 //  numbers.insertFirstPosition(-1)
-//  console.log(numbers);
 
 let arrayInpt = document.querySelector('#arrayInpt')
 let arrayBtn = document.querySelector('#insert-array-btn')
@@ -71,20 +64,28 @@ arrayBtn.addEventListener('click', () => {
 
 
 //Remove Last index
-//numbers.pop()
+//numbers.pop() - Remove the Last array element
 
-//Remove by index
+//Remove by index - Splice(index, amount) & indexOf()
 let arrayRemoveBtn = document.querySelector('#pop-array-btn')
 arrayRemoveBtn.addEventListener('click', () => {
   let val = Number(arrayInpt.value)
   let ind = numbers.indexOf(val)
-  while(ind >= 0){
-    numbers.splice(ind, 1)
-    ind = numbers.indexOf(val)
-  }
+    while(ind >= 0){
+        numbers.splice(ind, 1)
+        ind = numbers.indexOf(val)
+    }
   res.innerHTML = numbers.join(', ')
   console.log(numbers);
 })
 
+//numbers.shift() - Remove the first array element
+//numbers.unshift() - Insert first position of array 
 
+//Put back items in array with Splice('index', 'pass 0 do not remove', 'values you want put back',)
 
+let a = document.querySelector('#a').addEventListener('click',() => {
+    numbers.splice(5, 3)
+    console.log(numbers);
+    numbers.splice(5, 0, 5, 6, 7)
+})
