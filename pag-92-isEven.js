@@ -120,3 +120,40 @@ console.log("evens :", evens);
 //espalhamento(...) nos argumentos.
 let numbersCopy = Array.of(...numbers2)
 console.log("Array.of :", numbersCopy);
+
+// .fill - podemos passar posição que fará a troca dali em diante
+let faa = [1, 2, 3, 4, 5]
+//faa.fill("a", 2) // (value, index)
+//[1, 2, "a", "a", "a"]
+
+//Podemos interromper o fill passando um segundo index
+faa.fill(3, 1, 3) // (value, inicial index, last index)
+//[1, 3, 3, 4, 5]
+
+//Este metodo é bom  se quisermos criar um array e inicializar seus valores, ex:
+let ones = Array(6).fill(1) //[ 1, 1, 1, 1, 1, 1 ]
+
+// .copyWithin() - Copia sequencia de valores para uma posição no index
+let copyArray = [1, 2, 3, 4, 5, 6];
+copyArray.copyWithin(0, 3) //[ 4, 5, 6, 4, 5, 6 ]
+
+copyArray = [1, 2, 3, 4, 5, 6]
+copyArray.copyWithin(1, 3, 5) // posição 5 não inclusivo
+console.log("copyWithin()", copyArray);
+
+// Pag. 99 - Ordenando Elementos
+let numbers3 = Array.from(numbers)
+
+numbers3.reverse()
+console.log("Reverse():", numbers3);
+
+
+//[ 1, 10, 11, 12, 13, 14, 15, 2, 3, 4, ]
+//sort() - sorts by lexicographically, we need a function
+numbers3.sort()
+console.log(numbers3);
+//function
+numbers3.sort((a,b)=> a - b)//Retorna um numero negativo 
+//se b for maior que a, um numero positivo se a
+//for maior que  b e 0 se forem iguais.
+console.log("Sort(): ", numbers3);
