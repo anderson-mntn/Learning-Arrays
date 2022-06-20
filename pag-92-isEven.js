@@ -176,7 +176,7 @@ console.log(numbers3.sort(compare))// passada dentro pq return
 const friends = [
     {name:'John', age: 30 },
     {name:'Ana' , age: 20 },
-    {name:'Chris' , age: 25}
+    {name:'Chris', age: 25}
 ]
 function compareFriendsAge(a, b){
     if (a.age < b.age){
@@ -252,6 +252,16 @@ console.log(numbers.join('-'));
 // Uint32Array - inteiro de 32 bits sem sinal
 // Float32Array - Número de ponto flutuante padrão IEEE com 32 bits
 // Float64Array - Número de ponto flutuante padrão IEEE com 64 bits
+
+//Ex:
+let length = 5;
+let int16 = new Int16Array(length);
+let array16 = [];
+array16.length = length;
+for (let i=0; i<length; i++){
+    int16[i] = i+1;
+}
+console.log(int16);
 
 //Arrays tipados são ótimos para trabalhar com APIs WebGL, manipular bits e lidar com
 //arquivos e imagens. Esses arrays funcionam exatamente como arrays simples; os mesmos
